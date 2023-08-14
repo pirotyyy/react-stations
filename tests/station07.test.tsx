@@ -18,6 +18,8 @@ describe('<App />', () => {
       throw new Error('a <header> does not exist')
     }
 
+    console.log("🍺", window.getComputedStyle(header).backgroundColor)
+
     expect(
       compareColor(window.getComputedStyle(header).backgroundColor, '#f5f5f5'),
     ).toBe(true)
